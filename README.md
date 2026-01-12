@@ -32,14 +32,4 @@ PCA 1 and PCA 2: principal components for the three ecoregions were derived usin
 Study area boundary for the three ecoregions was derived from two sources: 1) Terrestrial Ecoregions: Level III http://www.cec.org/north-american-environmental-atlas/terrestrial-ecoregions-level-iii/ 
 and 2) original Sky Island polygons available here: https://skyisland.maps.arcgis.com/home/item.html?id=6797fbaf9e524cae836925c5de6a186a
 
-## Part 1. Explorations: identifying gaps in previous samples with regard to climate and fire history.
 
-List files...
-
-## Part 2. First pass at random selection of field site locations, dividing the region into New Mexico sites, northern Arizona sites, and sites in the Madrean Sky Islands.
-
-List files...
-
-## Part 3. Use the random selection of locations to create a spatially balanced sample.
-
-List files...
