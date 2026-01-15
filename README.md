@@ -1,5 +1,8 @@
 # lejos-al-desierto
 # Away to the wilderness!
+## A collaborative effort with @jamiesanderlin
+## Look for updates and more documentation coming soon.
+
 This repository is home to data and code used to select field site locations in the US Sky Islands and the Mogollon Rim/Plateau for the 2023 field season.
 
 # Algorithm
