@@ -1,14 +1,16 @@
 # lejos-al-desierto
 # Away to the wilderness!
-## A collaborative effort with @jamiesanderlin
-## Look for updates and more documentation coming soon.
+## A collaborative effort with jamiesanderlin
 
-This repository is home to data and code used to select field site locations in the US Sky Islands and the Mogollon Rim/Plateau for the 2023 field season.
+The purpose of the repository is to describe basic steps used to select field site locations in the US Sky Islands and the Mogollon Rim/Plateau for the 2023 field season. 
+The code is not repeatable without access to datasets that we input and generated during processing.
+
+Funding credit: Southwest Climate Adaptation Center swcasc.arizona.edu
 
 # Algorithm
 ## Candidate points
 1. Read in the data, transform to common crs and subset to the study region. 
-2. Identify all potential candidate sample locations by first extracting points from all raster cells using forward climate velocity layer as a template.
+2. Identify all potential candidate sample locations by first extracting center points from all raster cells using forward climate velocity layer as a template.
 3. Join the ownership, climate and fire data with the candidate points. 
 ## Previously sampled points
 1. Read in the data for point locations sampled previously in the United States and Mexico.
@@ -34,5 +36,22 @@ PCA 1 and PCA 2: principal components for the three ecoregions were derived usin
 
 Study area boundary for the three ecoregions was derived from two sources: 1) Terrestrial Ecoregions: Level III http://www.cec.org/north-american-environmental-atlas/terrestrial-ecoregions-level-iii/ 
 and 2) original Sky Island polygons available here: https://skyisland.maps.arcgis.com/home/item.html?id=6797fbaf9e524cae836925c5de6a186a
+
+## Code
+
+### Code to output a set of potential sample locations across a climate gradient
+1.	assemble.data.R: extract center points from 1 km grid; add attributes (ecoregion, FS management unit, PC climate values, elevation, burned and unburned)
+2.	ggplot_climate.R: plot the data extracted in previous step
+3.	fcvbins.R: bin the data (candidate & previously sampled points) by value of forward climate velocity and plot
+4.	distance.to.road.R: determine distance to the nearest road for subsets of candidate sample points 
+5.	fix.fire.data.R: output burned/unburned for all candidate points using an edited version of MTBS data 
+6.	select.pts.NM.R: example script for calculating sample size for each bin (burned and unburned). This one is for points in New Mexico
+
+### Code to generate a spatially balanced sample from locations output above
+1.	load_packages.R:  load needed packages for selecting study sites (check if installed and if not install them)
+2.	priority.site.select.master. R: apply the generalized random tessellation stratified (GRTS) sample to provide a spatially balanced sample of CASC sites. This is based on stevens and Olsen (2004) algorithm
+3.	sample_functions.R: contains all the sampling functions for sampling field sites.
+	
+
 
 
