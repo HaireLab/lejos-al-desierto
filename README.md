@@ -46,6 +46,7 @@ and 2) original Sky Island polygons available here: https://skyisland.maps.arcgi
 4.	distance.to.road.R: determine distance to the nearest road for subsets of candidate sample points 
 5.	fix.fire.data.R: output burned/unburned for all candidate points using an edited version of MTBS data 
 6.	select.pts.NM.R: example script for calculating sample size for each bin (burned and unburned). This one is for points in New Mexico
+7.	dataprep_pt.selection.Rmd: putting all the above steps together in report form
 
 ### Code to generate a spatially balanced sample from locations output above
 1.	load_packages.R:  load needed packages for selecting study sites (check if installed and if not install them)
