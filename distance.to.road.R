@@ -1,6 +1,7 @@
 ## distance.to.road.R
-## do this with rgeos
-## use the data from fire.data.prep.R
+## use rgeos or sf options to output distance to road from candidate points
+## input data from fire.data.prep.R
+## S. Haire
 
 library(raster)
 library(sp)
