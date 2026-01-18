@@ -40,18 +40,15 @@ and 2) original Sky Island polygons available here: https://skyisland.maps.arcgi
 ## Code
 
 ### Code to output a set of potential sample locations across a climate gradient
-1.	assemble.data.R: extract center points from 1 km grid; add attributes (ecoregion, FS management unit, PC climate values, elevation, burned and unburned)
-2.	ggplot_climate.R: plot the data extracted in previous step
-3.	fcvbins.R: bin the data (candidate & previously sampled points) by value of forward climate velocity and plot
-4.	distance.to.road.R: determine distance to the nearest road for subsets of candidate sample points 
-5.	fix.fire.data.R: output burned/unburned for all candidate points using an edited version of MTBS data 
-6.	select.pts.NM.R: example script for calculating sample size for each bin (burned and unburned). This one is for points in New Mexico
-7.	dataprep_pt.selection.Rmd: putting all the above steps together in report form
+1.	dataprep_pt.selection.Rmd: putting all the above steps for producing candidate points together in report form including steps in the algorithm, above, e.g., analysis across climate gradients, fire history, and screening for accessibility.
+2.	Graphical outputs from the report will soon be added.
 
 ### Code to generate a spatially balanced sample from locations output above
 1.	load_packages.R:  load needed packages for selecting study sites (check if installed and if not install them)
 2.	priority.site.select.master. R: apply the generalized random tessellation stratified (GRTS) sample to provide a spatially balanced sample of CASC sites. This is based on stevens and Olsen (2004) algorithm
 3.	sample_functions.R: contains all the sampling functions for sampling field sites.
+
+Stevens, D. L., & Olsen, A. R. (2004). Spatially Balanced Sampling of Natural Resources. Journal of the American Statistical Association, 99(465), 262–278. https://doi.org/10.1198/016214504000000250
 	
 
 
